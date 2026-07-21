@@ -121,63 +121,97 @@
 
 
 </header>
-
-
-
-
-
-
-
 <!-- ==========================
-        HERO
-=========================== -->
+     CARRUSEL PRINCIPAL
+========================== -->
 
-<section class="hero">
+<section class="carrusel">
 
-    <!-- TEXTO -->
+    <div class="slide activo">
 
-    <div class="hero-texto">
+        <img src="img/platos/poke-tropical.jpeg" 
+             alt="Poke Tropical">
 
-        <span class="hero-tag">
-            🌿 100% Fresco • Saludable • Natural
-        </span>
+        <div class="texto-slide">
 
-        <h2>
-            Alimentación saludable<br>
-            con sabor peruano
-        </h2>
+            <h2>
+                Nutre tu cuerpo,
+                conecta tus raíces
+            </h2>
 
-        <p>
-            Descubre una experiencia gastronómica única con bowls preparados al momento,
-            utilizando ingredientes frescos, saludables y combinaciones inspiradas en la
-            riqueza de la gastronomía peruana.
-        </p>
-
-        <div class="botones">
+            <p>
+                Bowls frescos con ingredientes
+                naturales y sabores únicos.
+            </p>
 
             <a href="menu.html" class="btn-ver">
                 Ver Menú
-            </a>
-
-            <a href="https://wa.me/51968921825?text=Hola%20QORI%20BOWL,%20quiero%20hacer%20un%20pedido"
-               class="btn-whatsapp"
-               target="_blank">
-
-                Pedir Ahora
-
             </a>
 
         </div>
 
     </div>
 
-    <!-- IMAGEN -->
 
-    <div class="hero-imagen">
 
-        <img src="img/poke.png" alt="Poke Bowl QORI BOWL">
+    <div class="slide">
+
+        <img src="img/platos/salmon-poke-furai.jpeg" 
+             alt="Salmón Poke Furai">
+
+        <div class="texto-slide">
+
+            <h2>
+                Sabor premium en cada bowl
+            </h2>
+
+            <p>
+                Ingredientes seleccionados
+                para una experiencia diferente.
+            </p>
+
+            <a href="menu.html" class="btn-ver">
+                Pedir Ahora
+            </a>
+
+        </div>
 
     </div>
+
+
+
+    <div class="slide">
+
+        <img src="img/platos/poke-charapa-vegano.jpeg" 
+             alt="Poke Charapa Vegano">
+
+        <div class="texto-slide">
+
+            <h2>
+                Opciones saludables para todos
+            </h2>
+
+            <p>
+                Frescura, equilibrio y mucho sabor.
+            </p>
+
+            <a href="menu.html" class="btn-ver">
+                Conocer Menú
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <button class="prev" onclick="cambiarSlide(-1)">
+        ❮
+    </button>
+
+    <button class="next" onclick="cambiarSlide(1)">
+        ❯
+    </button>
+
 
 </section>
 
@@ -463,10 +497,14 @@ Descubre los bowls favoritos de nuestros clientes.
 </footer>
 
 
-<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<!-- ==========================
+     BOTÓN FLOTANTE DE WHATSAPP
+=========================== -->
+
 <a href="https://wa.me/51968921825?text=Hola%20QORI%20BOWL,%20quiero%20realizar%20un%20pedido"
    class="whatsapp-float"
    target="_blank"
+   rel="noopener noreferrer"
    aria-label="WhatsApp">
 
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
@@ -474,6 +512,70 @@ Descubre los bowls favoritos de nuestros clientes.
 
 </a>
 
+
+<!-- ==========================
+     CARRUSEL - JAVASCRIPT
+=========================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let slideActual = 0;
+
+    const slides = document.querySelectorAll(".slide");
+
+    // Verificar que existan slides
+    if (slides.length === 0) {
+        return;
+    }
+
+    function mostrarSlide() {
+
+        slides.forEach(function (slide) {
+            slide.classList.remove("activo");
+        });
+
+        slides[slideActual].classList.add("activo");
+
+    }
+
+    function cambiarSlide(valor) {
+
+        slideActual += valor;
+
+        if (slideActual >= slides.length) {
+            slideActual = 0;
+        }
+
+        if (slideActual < 0) {
+            slideActual = slides.length - 1;
+        }
+
+        mostrarSlide();
+
+    }
+
+    // Hacer la función disponible para los botones
+    // ❮ y ❯ del carrusel
+    window.cambiarSlide = cambiarSlide;
+
+    // Mostrar la primera imagen
+    mostrarSlide();
+
+    // Cambiar automáticamente cada 5 segundos
+    setInterval(function () {
+        cambiarSlide(1);
+    }, 5000);
+
+});
+
+</script>
+
+
+<!-- ==========================
+     JAVASCRIPT PRINCIPAL
+=========================== -->
 
 <script src="js/script.js"></script>
 
