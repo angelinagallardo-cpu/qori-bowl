@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>QORI BOWL | Menú</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- HEADER -->
+
+<header>
+
+
+<nav class="navbar">
+
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <h1>
+                QORI <span>BOWL</span>
+            </h1>
+
+        </a>
+
+    </div>
+
+
+
+
+
+    <!-- MENU -->
+
+    <ul class="menu">
+
+
+        <li>
+            <a href="index.html">
+                Inicio
+            </a>
+        </li>
+
+
+        <li>
+            <a href="menu.html">
+                Menú
+            </a>
+        </li>
+
+
+        <li>
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+        </li>
+
+
+        <li>
+            <a href="contacto.html">
+                Contacto
+            </a>
+        </li>
+
+
+    </ul>
+
+
+
+
+
+    <!-- BOTON -->
+
+    <div class="boton">
+
+
+        <a href="https://wa.me/51968921825?text=Hola%20QORI%20BOWL,%20quiero%20realizar%20un%20pedido"
+
+           class="btn-pedido"
+
+           target="_blank">
+
+
+            Pedir Ahora
+
+
+        </a>
+
+
+    </div>
+    <!-- CARRITO -->
+
+<div class="carrito-icono">
+
+<button onclick="mostrarCarrito()">
+
+🛒 <span id="contador">0</span>
+
+</button>
+
+</div>
+
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- SECCION MENU -->
+
+
+<section class="menu-section">
+
+
+
+    <h2>
+        Nuestro Menú
+    </h2>
+
+
+
+    <p>
+        Bowls frescos, saludables y llenos de sabor.
+    </p>
+
+
+
+
+
+    <div class="cards">
+
+
+<!-- POKE TROPICAL -->
+
+<div class="card">
+
+<img src="img/poke.png" alt="Poke Tropical">
+
+<h3>
+Poke Tropical
+</h3>
+
+<p>
+Salmón fresco, mango, palta, pepino, edamame, wakame y salsa tropical.
+</p>
+
+<span>
+S/ 34.90
+</span>
+
+<button class="btn-carrito"
+onclick="agregarProducto('Poke Tropical',34.90)">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
+
+<!-- SALMON POKE FURAI -->
+
+<div class="card">
+
+<img src="img/poke.png" alt="Salmón Poke Furai">
+
+<h3>
+Salmón Poke Furai
+</h3>
+
+<p>
+Salmón furai crujiente, arroz, palta, pepino, edamame, zanahoria y salsa especial.
+</p>
+
+<span>
+S/ 36.90
+</span>
+
+<button class="btn-carrito"
+onclick="agregarProducto('Salmón Poke Furai',36.90)">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
+
+<!-- ACEVICHADO ATUN -->
+
+<div class="card">
+
+<img src="img/poke.png" alt="Poke Acevichado">
+
+<h3>
+Poke Acevichado de Atún
+</h3>
+
+<p>
+Atún acevichado, camote, choclo, cebolla morada, palta, cancha y leche de tigre.
+</p>
+
+<span>
+S/ 33.90
+</span>
+
+<button class="btn-carrito"
+onclick="agregarProducto('Poke Acevichado de Atún',33.90)">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
+
+<!-- CHARAPA VEGGIE -->
+
+<div class="card">
+
+<img src="img/poke.png" alt="Poke Charapa Veggie">
+
+<h3>
+Poke Charapa Veggie
+</h3>
+
+<p>
+Charapa, quinoa, palta, pepino, edamame y salsa de ajonjolí.
+</p>
+
+<span>
+S/ 33.90
+</span>
+
+<button class="btn-carrito"
+onclick="agregarProducto('Poke Charapa Veggie',33.90)">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
+
+
+<!-- LOMO HITOSHI -->
+
+<div class="card">
+
+<img src="img/poke.png" alt="Poke Lomo Hitoshi">
+
+<h3>
+Poke Lomo Hitoshi
+</h3>
+
+<p>
+Lomo saltado, arroz, cebolla, tomate cherry, palta, pepino y salsa nikkei.
+</p>
+
+<span>
+S/ 37.90
+</span>
+
+<button class="btn-carrito"
+onclick="agregarProducto('Poke Lomo Hitoshi',37.90)">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
+</div> <!-- CIERRE DE CARDS -->
+
+
+</section> <!-- CIERRE MENU --> 
+
+
+
+<!-- =====================================
+     BEBIDAS
+===================================== -->
+
+<section class="bebidas">
+
+    <h2>Bebidas</h2>
+
+    <p>
+        Refrescos naturales para acompañar tu poke favorito.
+    </p>
+
+    <div class="cards">
+
+        <!-- LIMONADA DE FRUTOS ROJOS -->
+        <div class="card">
+
+            <img src="img/bebidas/limonada-frutos-rojos.jpeg" alt="Limonada de Frutos Rojos">
+
+            <h3>Limonada de Frutos Rojos</h3>
+
+            <p>
+                Mezcla de frutos rojos con un sabor dulce,
+                ligeramente ácido y refrescante.
+            </p>
+
+            <span>S/ 12.90</span>
+
+            <button class="btn-carrito"
+                onclick="agregarProducto('Limonada de Frutos Rojos',12.90)">
+                🛒 Agregar al carrito
+            </button>
+
+        </div>
+
+        <!-- MARACUYÁ TROPICAL -->
+        <div class="card">
+
+            <img src="img/bebidas/maracuya-tropical.jpeg" alt="Maracuyá Tropical">
+
+            <h3>Maracuyá Tropical</h3>
+
+            <p>
+                Bebida natural de maracuyá con sabor intenso
+                y tropical.
+            </p>
+
+            <span>S/ 12.90</span>
+
+            <button class="btn-carrito"
+                onclick="agregarProducto('Maracuyá Tropical',12.90)">
+                🛒 Agregar al carrito
+            </button>
+
+        </div>
+
+        <!-- LIMONADA DE PEPINO Y MENTA -->
+        <div class="card">
+
+            <img src="img/bebidas/limonada-pepino-menta.jpeg" alt="Limonada de Pepino y Menta">
+
+            <h3>Limonada de Pepino y Menta</h3>
+
+            <p>
+                Combinación fresca de pepino, limón y menta.
+            </p>
+
+            <span>S/ 11.90</span>
+
+            <button class="btn-carrito"
+                onclick="agregarProducto('Limonada de Pepino y Menta',11.90)">
+                🛒 Agregar al carrito
+            </button>
+
+        </div>
+
+        <!-- AGUA DE COCO -->
+        <div class="card">
+
+            <img src="img/bebidas/agua-de-coco.jpeg" alt="Agua de Coco">
+
+            <h3>Agua de Coco</h3>
+
+            <p>
+                Bebida natural ligera e hidratante con sabor a coco.
+            </p>
+
+            <span>S/ 11.90</span>
+
+            <button class="btn-carrito"
+                onclick="agregarProducto('Agua de Coco',11.90)">
+                🛒 Agregar al carrito
+            </button>
+
+        </div>
+
+        <!-- TÉ DE HIBISCO -->
+        <div class="card">
+
+            <img src="img/bebidas/te-de-hibisco.jpeg" alt="Té de Hibisco">
+
+            <h3>Té de Hibisco</h3>
+
+            <p>
+                Infusión floral y frutal con propiedades antioxidantes.
+            </p>
+
+            <span>S/ 11.90</span>
+
+            <button class="btn-carrito"
+                onclick="agregarProducto('Té de Hibisco',11.90)">
+                🛒 Agregar al carrito
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-contenido">
+
+
+        <div class="footer-logo">
+
+            <h2>
+                QORI <span>BOWL</span>
+            </h2>
+
+            <p>
+                Nutre tu cuerpo, conecta tus raíces.
+            </p>
+
+        </div>
+
+
+        <div class="footer-info">
+
+            <h3>
+                Contacto
+            </h3>
+
+            <p>
+                📍 Magdalena del Mar, Lima
+            </p>
+
+            <p>
+                📞 +51 968 921 825
+            </p>
+
+            <p>
+                ✉️ contacto@qoribowl.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-horario">
+
+            <h3>
+                Horario
+            </h3>
+
+            <p>
+                Lunes - Domingo
+            </p>
+
+            <p>
+                11:00 a.m. - 10:00 p.m.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+        © 2026 QORI BOWL. Todos los derechos reservados.
+    </p>
+
+
+</footer>
+
+<!-- PANEL DEL CARRITO -->
+
+<div id="panel-carrito" class="panel-carrito">
+
+<button class="cerrar-carrito" onclick="mostrarCarrito()">
+✖
+</button>
+
+<h2>
+🛒 Mi Pedido
+</h2>
+
+<div id="lista-carrito">
+Tu carrito está vacío
+</div>
+
+<h3 id="total">
+Total: S/ 0.00
+</h3>
+
+<div class="datos-cliente">
+
+
+<input 
+type="text"
+id="nombreCliente"
+placeholder="Tu nombre">
+
+
+<input 
+type="text"
+id="direccionCliente"
+placeholder="Dirección de entrega">
+
+
+<select id="pagoCliente">
+
+<option value="">
+Método de pago
+</option>
+
+<option>
+Yape
+</option>
+
+<option>
+Plin
+</option>
+
+<option>
+Efectivo
+</option>
+
+</select>
+
+
+</div>
+
+
+
+<button onclick="enviarWhatsApp()" class="btn-whatsapp">
+
+Enviar pedido por WhatsApp 📲
+
+</button>
+
+</div>
+
+<div id="fondo-carrito" onclick="mostrarCarrito()"></div>
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
